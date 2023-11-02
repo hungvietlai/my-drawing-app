@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Drawing App</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #drawingCanvas {
+            border: 1px solid black;
+        }
+        #controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background: white;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <input type="color" id="colorPicker" value="#000000">
+        <button id="eraserButton">Eraser</button>
+        <label for="brushSize">Brush Size:</label>
+        <input type="range" id="brushSize" min="1" max="50" value="5">
+        <button id="clearButton">Clear Canvas</button>
+    </div>
+    <canvas id="drawingCanvas"></canvas>
+    <script src="app.js"></script>
+</body>
+</html>
