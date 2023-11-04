@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-drawing-app-deployment
+spec:
+  replicas: 2
+  selector:
+      matchLabels:
+        app: my-drawing-app
+  template:
+    metadata:
+      labels:
+        app: my-drawing-app
+    spec:
+      containers:
+        - name: my-drawing-app-pod
+          image: hungvietlai:my-drawing-app
+          ports:
+            - containerPort: 3000
