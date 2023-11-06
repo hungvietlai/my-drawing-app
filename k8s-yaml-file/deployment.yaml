@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: my-drawing-app-pod
-          image: hungvietlai:my-drawing-app
+          image: hungvietlai/my-drawing-app:33
           ports:
             - containerPort: 3000
